@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* Ceha ti ovo ces riktat :D :D*/
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+ul li{
+    margin: 0 5px;
+}

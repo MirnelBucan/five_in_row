@@ -12,10 +12,30 @@
 </head>
 
 <body>
-  <p>Hello ceha From Hell</p>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://placeholder.com"><img src="https://via.placeholder.com/75x75"></a>
+      </li>
+      <li>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username..">
+      </li>
+      <li>
+        <label for="password">password</label>
+        <input type="password" id="password" placeholder="Enter password..">
+      </li>
+      <li>
+        <button onlick="js/login.js">Log in</button>
+      </li>
+    </ul>
+  </nav>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
+  <script type="application/json" src="db/users.json">
+    console.log(JSON.parse(user));
+  </script>
 </body>
 
 </html>
