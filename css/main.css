@@ -1,7 +1,9 @@
 body{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     /* Ceha ti ovo ces riktat :D :D*/
 }
 ul{
