@@ -29,6 +29,9 @@ body {
     margin: 20px 0;
     height: 25px;
     padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #999;
 }
 
 .forma #submit {
@@ -50,3 +53,12 @@ body {
     font-size: 25px;
     font-family: 'Gill Sans', sans-serif;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
