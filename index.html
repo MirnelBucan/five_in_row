@@ -6,30 +6,24 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./images/logo.jpg">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
-    <ul>
-      <li>
-        <a href="https://placeholder.com"><img src="https://via.placeholder.com/75x75"></a>
-      </li>
-      <li>
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter username..">
-      </li>
-      <li>
-        <label for="password">password</label>
-        <input type="password" id="password" placeholder="Enter password..">
-      </li>
-      <li>
-        <button onlick="js/login.js">Log in</button>
-      </li>
-    </ul>
+    <a href="https://placeholder.com"><img id="logo" src="images/logo.jpg"></a>
   </nav>
+  <div id="forma">
+    <form class="forma">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter username..">
+      <label for="password">password</label>
+      <input type="password" id="password" placeholder="Enter password..">
+      <input type="submit" id="submit" value="Log in">
+    </form>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
