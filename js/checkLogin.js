@@ -12,4 +12,4 @@ function checkLogin(){
   });
   if(!logovan)
     location.assign('/index.html');
-}
+}();
