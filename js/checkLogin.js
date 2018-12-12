@@ -1,5 +1,5 @@
-(function checkLogin(){
-  const checkUsers = localStorage.getItem("user");
+function checkLogin(){
+  const checkUsers = localStorage("user");
   let logovan = false;
   if(!checkUsers)
     location.assign('/index.html');
@@ -12,4 +12,4 @@
   });
   if(!logovan)
     location.assign('/index.html');
-})();
+}();

@@ -5,16 +5,13 @@ $(".forma").on('submit', function(e) {
     let logovan = false;
     users.forEach(function(user){
       if(user.username === username)
-        if(user.password === password){
+       if(user.password === password){
           logovan = true;
-          localStorage.setItem
-          location.assign('/game.html');
+         location.assign('/game.html');
         }
     });
-    if(!logovan) {
-
-    }
-    //Ubaci jquery sa label paragrafima kao bootstrap sto ima alert
+    if(!logovan)
+      //Ubaci jquery sa label paragrafima kao bootstrap sto ima alert
 
 })
 
