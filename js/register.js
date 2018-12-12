@@ -8,6 +8,9 @@ $(".forma").on('submit', function(e) {
     users.push({ username, password });
     window.localStorage.setItem('users', JSON.stringify(users));
     $(".poruka").text("Uspjesno ste registrovani");
+    setTimeout(function() {
+      location.assign('login.html');
+    }, 2000);
   } else {
     users = JSON.parse(users);
     let postoji = false;
@@ -23,11 +26,11 @@ $(".forma").on('submit', function(e) {
       localStorage.removeItem('users');
       localStorage.setItem('users', JSON.stringify(users));
       $(".poruka").text("Uspjesno ste registrovani");
+      setTimeout(function() {
+        location.assign('login.html');
+      }, 2000);
     } else {
       $(".poruka").text("User vec postoji");
     }
   }
-  setTimeout(function() {
-    location.assign('login.html');
-  }, 2000);
 });

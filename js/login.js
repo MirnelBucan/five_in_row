@@ -15,7 +15,7 @@ $(".forma").on('submit', function(e) {
     if (user.username === username)
       if (user.password === password) {
         logovan=true;
-        sessionStorage.setItem('user',JSON.stringify({username, password}));//+JSON.stringify({username, password});
+        sessionStorage.setItem('user',JSON.stringify({username, password}));
         location.assign('game.html');
         return;
       }
