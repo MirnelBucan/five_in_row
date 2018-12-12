@@ -14,12 +14,14 @@ $(".forma").on('submit', function(e) {
   users.forEach(function(user) {
     if (user.username === username)
       if (user.password === password) {
-        logovan = true;
+        logovan=true;
+        sessionStorage.setItem('user',JSON.stringify({username, password}));//+JSON.stringify({username, password});
         location.assign('game.html');
+        return;
       }
   });
   if (!logovan) {
     //eventualno dodat za massage da je fulio pw ili nesto slicno
-    location.assign('login.html');
+    //location.assign('login.html');
   }
 });
