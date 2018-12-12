@@ -8,6 +8,13 @@ body {
     /* Ceha ti ovo ces riktat :D :D*/
 }
 
+.index {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #logo {
     width: 55px;
 }
@@ -16,6 +23,12 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#forma h1 {
+    text-align: center;
 }
 
 .forma {

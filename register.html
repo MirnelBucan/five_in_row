@@ -16,16 +16,29 @@
   <nav>
     <a href="#"><img id="logo" src="images/logo.jpg"></a>
     <div>
+      <a href="index.html">Home</a>
       <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
     </div>
   </nav>
-  <div class="index">
-    <h1>Home Page</h1>
+
+  <h1>Register</h1>
+
+  <div id="forma">
+    <div>
+      <h1>Register</h1>
+      <h2 class="poruka"></h2>
+      <form class="forma">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username..">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password..">
+        <input type="submit" id="submit" value="Register">
+      </form>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/register.js"></script>
 </body>
 
 </html>
