@@ -1,15 +1,15 @@
-function checkLogin(){
+(function checkLogin(){
   const checkUsers = localStorage("user");
   let logovan = false;
   if(!checkUsers)
-    location.assign('/index.html');
+    location.assign('/login.html');
   users.forEach(function(user){
     if(user.username === checkUsers.username)
       if(user.password === checkUsers.password){
-        logovan = true;
+        location.assign('/game');
         return;
       }
   });
   if(!logovan)
-    location.assign('/index.html');
-}();
+    location.assign('/login.html');
+})();
