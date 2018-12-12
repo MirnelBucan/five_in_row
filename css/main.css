@@ -8,11 +8,6 @@ body {
     /* Ceha ti ovo ces riktat :D :D*/
 }
 
-nav {
-    position: fixed;
-    top: 0;
-}
-
 #logo {
     width: 55px;
 }
@@ -48,4 +43,10 @@ nav {
 
 .forma #submit:hover {
     transform: scale(1.1);
+}
+
+.forma label {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Gill Sans', sans-serif;
 }
