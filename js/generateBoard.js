@@ -16,6 +16,9 @@ $(document).ready(function() {
     if(a % 2 === 0) {
       $(this).css("background-color", "black");
       board[row][col] = 'black';
+      if(checkWinner(board, moves, col, row, moves)){
+        alert(checkWinner(board, moves, col, row, moves));
+
       }
       a = 1;
     } else {

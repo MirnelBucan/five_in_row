@@ -7,17 +7,39 @@
     <title>Game</title>
     <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/game.css">
-
     <script type="text/javascript" src="db/users.js"></script>
+    <link rel="stylesheet" href="css/gomoku.css">
     <script type="text/javascript" src="js/checkLogin.js"></script>
+        <style type="text/css">
+         #game {
+        width: 600px;
+        height: 600px;
+        margin: 50px auto;
+    }
+    </style>
 </head>
     <h1>GAME TIME</h1>
-    <div class="board">
-
+    <div class="game">
+        <div id="game">
+        </div>
     </div>
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/gomoku.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        new $.gomoku($('#game'), {
+            ai_first: null,
+            board_size: 15,
+            endgame: function(computer_wins) {
+                alert('You ' + (computer_wins ? 'lost' : 'won') + '!');
+            }
+        });
+
+    });
+    </script>
     <script src="js/generateBoard.js"></script>
     <script src="js/columnClick.js"></script>
 </body>
