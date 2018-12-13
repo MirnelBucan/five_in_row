@@ -1,7 +1,5 @@
-var a = 0;
-var color;
-
 $(document).ready(function() {
+  let a = 0;
   //generating board
   for(let i = 1; i <= 15; i++) {
     $(".board").append('<div class="row row' + i + '"></div>');
