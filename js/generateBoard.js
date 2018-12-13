@@ -21,5 +21,6 @@ $(document).ready(function() {
       margin: "0",
     };
     $(this).css( styles );
+    $(this).unbind('click');
   });
 });
