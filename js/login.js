@@ -1,5 +1,3 @@
-//LOGIN FUNCTION
-
 $(".forma").on('submit', function(e) {
   e.preventDefault();
   let username = $("#username").val();
@@ -14,14 +12,15 @@ $(".forma").on('submit', function(e) {
   users.forEach(function(user) {
     if (user.username === username)
       if (user.password === password) {
-        logovan=true;
-        sessionStorage.setItem('user',JSON.stringify({username, password}));
+        logovan = true;
+        sessionStorage.setItem('user', JSON.stringify({ username, password }));
         location.assign('game.html');
         return;
       }
   });
   if (!logovan) {
-    //eventualno dodat za massage da je fulio pw ili nesto slicno
     //location.assign('login.html');
+    $(".poruka").attr('display', 'block').text("Invalid username/password!").fadeOut(3000);
+    $('.forma').trigger('reset');
   }
 });

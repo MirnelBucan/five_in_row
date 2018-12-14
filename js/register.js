@@ -6,7 +6,7 @@ $(".forma").on('submit', function(e) {
   if (!users) {
     users = [];
     users.push({ username, password });
-    window.localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('users', JSON.stringify(users));
     $(".poruka").text("Uspjesno ste registrovani");
     setTimeout(function() {
       location.assign('login.html');
@@ -25,7 +25,7 @@ $(".forma").on('submit', function(e) {
       users.push({ username, password });
       localStorage.removeItem('users');
       localStorage.setItem('users', JSON.stringify(users));
-      $(".poruka").text("Uspjesno ste registrovani");
+      $(".poruka").text("Uspjesno ste registrovani").fadeOut(1500);
       setTimeout(function() {
         location.assign('login.html');
       }, 2000);
