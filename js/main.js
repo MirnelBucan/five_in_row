@@ -38,4 +38,26 @@ function login() {
       location.assign('/login');
     }
   });
+<<<<<<< HEAD
 }
+=======
+}
+$(document).ready(function() {
+  //ovdje ide kad se dom loada
+})
+
+$("#data").on("click", function() {
+  $.ajax({
+    url: "./db/users.json",
+    dataType: "json",
+    success: function(data) {
+      setting(data);
+    }
+  });
+
+  function setting(data) {
+    data.username = "ndsna";
+    console.log(data);
+  }
+})
+>>>>>>> ec248efd8d950747e2fefbdca98f1be21abcc973

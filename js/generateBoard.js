@@ -5,9 +5,9 @@ $(document).ready(function() {
   const color = ['green', 'black'];
   //generating board
   for (let i = 0; i < 15; i++) {
-    $(".game").append('<div class="row row' + i + '"></div>');
+    $(".game").append('<tr class="row row' + i + '"></tr>');
     for (let j = 0; j < 15; j++) {
-      $('.row' + i).append(`<div class="column ${i} ${j}"></div>`);
+      $('.row' + i).append(`<td class="column ${i} ${j}"></td>`);
     }
   }
   $(".column").on('click', function(e) {
@@ -19,7 +19,7 @@ $(document).ready(function() {
       board[row][col] = 'black';
       a = 1;
     } else {
-      $(this).css("background-color", "green");
+      $(this).css("background-color", "white");
       board[row][col] = 'green';
       a = 0;
     }
@@ -27,6 +27,8 @@ $(document).ready(function() {
       width: "30px",
       height: "30px",
       margin: "0",
+      "border-radius": "50%",
+      "border": "1px solid black",
     };
     $(this).css(styles);
     $(this).unbind('click');

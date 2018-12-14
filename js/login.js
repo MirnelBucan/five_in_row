@@ -12,9 +12,12 @@ $(".forma").on('submit', function(e) {
   users.forEach(function(user) {
     if (user.username === username)
       if (user.password === password) {
+        logovan=true;
+        sessionStorage.setItem('user',JSON.stringify({username, password}));
+        location.assign('chooseGame.html');
         logovan = true;
         sessionStorage.setItem('user', JSON.stringify({ username, password }));
-        location.assign('game.html');
+        location.assign('chooseGame.html');
         return;
       }
   });
