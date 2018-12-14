@@ -1,3 +1,4 @@
+//
 $(".forma").on('submit', function(e) {
   e.preventDefault();
   let username = $("#username").val();
@@ -25,7 +26,7 @@ $(".forma").on('submit', function(e) {
       users.push({ username, password });
       localStorage.removeItem('users');
       localStorage.setItem('users', JSON.stringify(users));
-      $(".poruka").text("Uspjesno ste registrovani").fadeOut(1500);
+      $(".poruka").text("Uspjesno ste registrovani").fadeOut('slow');
       setTimeout(function() {
         location.assign('login.html');
       }, 2000);
