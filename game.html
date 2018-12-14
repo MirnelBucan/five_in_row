@@ -9,36 +9,63 @@
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/gomoku.css">
     <script type="text/javascript" src="js/checkLogin.js"></script>
-        <style type="text/css">
-         #game {
-        width: 600px;
-        height: 600px;
-        margin: 50px auto;
-    }
+    <style type="text/css">
+       #game {
+           width: 600px;
+           height: 600px;
+           margin: 50px auto;
+       }
+
+       h1 {
+           margin: auto;
+       }
+
+       .logout {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            background-color: grey;
+            border: none;
+            outline: none;
+        }
     </style>
 </head>
-<body>
     <h1>GAME TIME</h1>
-    <div class="game">
-        <div id="game">
+    <div>
+        <div id="game"> 
         </div>
+    </div>
+    <div class="logout">
+        <button onclick="logout()">Logout</button>
     </div>
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/gomoku.js"></script>
     <script>
-    $(document).ready(function() {
-
-        new $.gomoku($('#game'), {
-            ai_first: null,
-            board_size: 15,
-            endgame: function(computer_wins) {
-                alert('You ' + (computer_wins ? 'lost' : 'won') + '!');
-            }
-        });
-
-    });
+        function logout() {
+            sessionStorage.removeItem('user');
+            location.assign('index.html');
+        }
     </script>
+    <script>
+        $(document).ready(function() {
+
+            new $.gomoku($('#game'), {
+                ai_first: null,
+                board_size: 15,
+                endgame: function(computer_wins) {
+                    alert('You ' + (computer_wins ? 'lost' : 'won') + '!');
+                }
+            });
+
+        });
+    </script>
+    <script src="js/checkMoves.js"></script>
 </body>
 </html>
